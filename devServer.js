@@ -13,7 +13,7 @@ app.use(require('webpack-dev-middleware')(compiler, {
 
 app.use(require('webpack-hot-middleware')(compiler));
 
-app.get('/settings.json', function(req, res) {
+app.get('/static/settings.json', function(req, res) {
   res.sendFile(path.join(__dirname, 'settings.json'));
 });
 
