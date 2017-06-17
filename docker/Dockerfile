@@ -1,11 +1,8 @@
-FROM centos:centos7
-MAINTAINER Alex Leonhardt <aleonhardt.py@gmail.com>
+FROM python:3
 
-RUN yum -y install epel-release python-devel python-pip python-setuptools git
-
-RUN cd /opt && \
-    git clone https://github.com/tinyclues/saltpad.git && \
-    cd /opt/saltpad && \
+RUN git clone https://github.com/ryanmaclean/saltpad.git && \
+    cd saltpad && \
+    git checkout python_3_compatibility && \
     pip install -r requirements.txt
 
 ADD ./local_settings.docker /opt/saltpad/saltpad/local_settings.py
