@@ -13,12 +13,12 @@ Build
 -----
 
 ```
-docker build -t name/saltpad:latest .
+docker build -t name/saltpad:python3 .
 ```
 
 Run
 ---
 
 ```
-docker run -p 5000:5000 name/saltpad:latest
+docker run -p 5000:5000 name/saltpad:python3
 ```
